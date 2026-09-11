@@ -11,7 +11,7 @@ Publicado vía [GitHub Pages](https://pages.github.com/) directamente desde este
 - `terminos.html` — términos y condiciones.
 - `contacto.html` — contacto/soporte.
 - `styles.css` — estilos compartidos por las cuatro páginas.
-- `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png` — icono de la app en los tamaños que necesita la web (pestaña del navegador, iOS, y junto al wordmark en la barra de navegación).
+- `favicon-32.png`, `apple-touch-icon.png` — icono de la app para la pestaña del navegador e iOS.
 
 ## Contacto
 
