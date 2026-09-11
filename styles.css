@@ -1,0 +1,189 @@
+/* Tokens de diseño calcados de lib/core/theme/app_theme.dart --
+   misma paleta 60/30/10, mismos radios/espaciados que la app. */
+:root {
+  --primary: #000000;
+  --accent: #ff6b35;
+  --streak-bg: #fdc463;
+  --background: #eceff1;
+  --surface: #dceefb;
+  --text-primary: #1a1d29;
+  --text-secondary: #5b6472;
+  --danger: #c33d41;
+  --divider: #e5e7eb;
+  --access-accent: #1e3a8a;
+
+  --radius-card: 16px;
+  --radius-sheet: 24px;
+  --radius-chip: 8px;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  --content-max: 720px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+a { color: var(--access-accent); }
+a:hover { text-decoration: none; }
+
+.wordmark {
+  font-family: 'Lobster', cursive;
+  font-weight: 400;
+}
+
+/* Cabecera de acceso: mismo degradado navy que las 3 pantallas de
+   acceso de la app (AppGradients.accessBackground invertido a oscuro
+   para la web, con accessAccent como base en vez de background). */
+.hero {
+  background: linear-gradient(180deg, var(--access-accent) 0%, #14285f 100%);
+  color: #fff;
+  padding: 72px 20px 96px;
+  text-align: center;
+}
+
+.hero .wordmark {
+  font-size: 4rem;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+.hero p.tagline {
+  font-size: 1.15rem;
+  color: #dbe4ff;
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: var(--radius-chip);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover { opacity: 0.88; }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+nav.top {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 20px 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.top .wordmark { font-size: 1.6rem; color: var(--text-primary); }
+.hero nav.top .wordmark { color: #fff; }
+
+nav.top a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-left: var(--space-lg);
+  opacity: 0.85;
+}
+nav.top a:hover { opacity: 1; }
+
+main {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+.legal main { padding-top: 40px; }
+
+h1 { font-size: 1.8rem; margin: 0 0 8px; }
+h2 { font-size: 1.3rem; margin-top: 40px; }
+.updated { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 32px; }
+
+.section-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 64px;
+  padding: 48px 20px;
+  background: var(--surface);
+  border-radius: var(--radius-sheet);
+}
+
+.cta h2 { margin-top: 0; }
+
+footer {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .links a {
+  color: var(--text-secondary);
+  margin-right: var(--space-md);
+  text-decoration: none;
+}
+footer .links a:hover { color: var(--text-primary); }
+
+ul { padding-left: 20px; }
+li { margin-bottom: 6px; }
+
+@media (max-width: 480px) {
+  .hero { padding: 56px 16px 72px; }
+  .hero .wordmark { font-size: 3rem; }
+}
