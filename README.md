@@ -1,6 +1,6 @@
-# Actio — Sitio web oficial
+# Actio — Sitio web
 
-Sitio web oficial público de [Actio](https://play.google.com/store/apps/details?id=com.actioapp.actio), la app de organización de rutinas de entrenamiento: página de inicio, política de privacidad, términos y condiciones, y contacto.
+Sitio web público de [Actio](https://play.google.com/store/apps/details?id=com.actioapp.actio), la app de organización de rutinas de entrenamiento: página de inicio, política de privacidad, términos y condiciones, y contacto.
 
 Publicado vía [GitHub Pages](https://pages.github.com/) directamente desde este repositorio.
 
