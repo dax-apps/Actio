@@ -20,6 +20,10 @@ Cada idioma incluye las mismas páginas:
 - `terminos.html` — términos y condiciones.
 - `contacto.html` — contacto y soporte.
 
+## Derechos de autor
+
+© DAX-Apps. Todos los derechos reservados. No está permitido copiar, reproducir, distribuir ni modificar esta web ni la app Actio, ni ninguna de sus partes, de forma total o parcial, sin autorización previa y por escrito. Ver los [términos y condiciones](https://dax-apps.github.io/Actio/terminos.html).
+
 ## Contacto
 
 dax.apps.mobile@gmail.com
