@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontaktua — Actio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="legal">
+
+<nav class="top">
+  <a href="index.html" class="wordmark" style="text-decoration:none;">Actio</a>
+  <div>
+    <a href="index.html">Hasiera</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacidad.html">Pribatutasuna</a>
+    <a href="terminos.html">Baldintzak</a>
+    <select class="lang-select" id="langSelect" aria-label="Hizkuntza"><option value="../contacto.html">Español</option><option value="../gl/contacto.html">Galego</option><option value="../ca/contacto.html">Català</option><option value="../eu/contacto.html" selected>Euskara</option><option value="../en/contacto.html">English</option><option value="../de/contacto.html">Deutsch</option><option value="../fr/contacto.html">Français</option><option value="../it/contacto.html">Italiano</option><option value="../pt/contacto.html">Português</option></select>
+  </div>
+</nav>
+
+<main>
+<h1>Kontaktua</h1>
+<p>Zalantzaren bat, arazo teknikoren bat duzu, edo Actiorako zerbait proposatu nahi duzu? Idatzi iezaguzu zuzenean:</p>
+
+<div class="card" style="margin: 32px 0; text-align:center;">
+  <h3 style="margin-bottom:16px;">Laguntza-posta</h3>
+  <a class="btn" href="mailto:dax.apps.mobile@gmail.com">dax.apps.mobile@gmail.com</a>
+</div>
+
+<h2>Idatzi aurretik, arazo teknikoa bada</h2>
+<p>Asko laguntzen digu hauek gehitzen badituzu:</p>
+<ul>
+  <li>Zure gailuaren eredua eta Androiden bertsioa.</li>
+  <li>Arazoa gertatu zenean zer egiten ari zinen.</li>
+  <li>Pantaila-argazki bat, ahal bada.</li>
+</ul>
+
+<p>Zer datu gordetzen ditugun edo zure kontua nola ezabatu jakiteko, kontsultatu <a href="privacidad.html">pribatutasun-politika</a>.</p>
+</main>
+
+<footer>
+  <span>© <span id="year"></span> Actio — DAX-Apps</span>
+  <div class="links">
+    <a href="index.html">Hasiera</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacidad.html">Pribatutasuna</a>
+    <a href="terminos.html">Baldintzak</a>
+    <a href="contacto.html">Kontaktua</a>
+  </div>
+  <nav class="langs" aria-label="Hizkuntza"><a href="../contacto.html" hreflang="es" lang="es">Español</a><a href="../gl/contacto.html" hreflang="gl" lang="gl">Galego</a><a href="../ca/contacto.html" hreflang="ca" lang="ca">Català</a><span aria-current="true">Euskara</span><a href="../en/contacto.html" hreflang="en" lang="en">English</a><a href="../de/contacto.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/contacto.html" hreflang="fr" lang="fr">Français</a><a href="../it/contacto.html" hreflang="it" lang="it">Italiano</a><a href="../pt/contacto.html" hreflang="pt" lang="pt">Português</a></nav>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('langSelect').addEventListener('change', (e) => { window.location.href = e.target.value; });</script>
+</body>
+</html>

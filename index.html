@@ -16,17 +16,30 @@
 
 <div class="hero">
   <nav class="top">
-    <span class="wordmark">Actio</span>
-    <div>
+    <img
+      class="brand-icon"
+      src="icon-80.png"
+      srcset="icon-40.png 1x, icon-80.png 2x, icon-120.png 3x"
+      width="40" height="40"
+      alt="Actio">
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="faq.html">FAQ</a>
       <a href="privacidad.html">Privacidad</a>
       <a href="terminos.html">Términos</a>
       <a href="contacto.html">Contacto</a>
+      <select class="lang-select" id="langSelect" aria-label="Idioma"><option value="index.html" selected>Español</option><option value="gl/index.html">Galego</option><option value="ca/index.html">Català</option><option value="eu/index.html">Euskara</option><option value="en/index.html">English</option><option value="de/index.html">Deutsch</option><option value="fr/index.html">Français</option><option value="it/index.html">Italiano</option><option value="pt/index.html">Português</option></select>
     </div>
   </nav>
 
   <h1 class="wordmark" style="margin-top:56px;">Actio</h1>
   <p class="tagline">Rutinas, calendario y progreso de entrenamiento.</p>
-  <a class="btn" href="https://play.google.com/store/apps/details?id=com.actioapp.actio" target="_blank" rel="noopener">Descargar en Google Play</a>
+  <p style="color:var(--text-secondary); margin:0 0 16px;">Pruébala 7 días gratis: sin registro previo y sin método de pago.</p>
+  <span class="btn btn-disabled" aria-disabled="true">Próximamente en Google Play</span>
 </div>
 
 <main>
@@ -38,7 +51,7 @@
   <div class="features">
     <div class="card">
       <h3>Rutinas a tu medida</h3>
-      <p>Crea, reordena, duplica y elimina rutinas cuando quieras. Series independientes, notas y temporizador de descanso configurable.</p>
+      <p>Crea, reordena, duplica y elimina rutinas cuando quieras. Series independientes con repeticiones, peso y RIR opcionales, que recorres una a una en cada ejercicio, más notas y temporizador de descanso configurable.</p>
     </div>
     <div class="card">
       <h3>Calendario bajo tu control</h3>
@@ -50,34 +63,60 @@
     </div>
     <div class="card">
       <h3>Estadísticas completas</h3>
-      <p>Racha de días entrenados, récords personales, historial de peso y volumen de ejercicios, y actividad acumulada de toda tu vida en la app.</p>
+      <p>Racha de días entrenados, récords personales, historial de pesos, de volumen y de RIR, 1RM estimado por ejercicio, ejercicio más entrenado, distribución por día de la semana y actividad acumulada de toda tu vida en la app.</p>
     </div>
     <div class="card">
       <h3>Organiza con etiquetas</h3>
       <p>Clasifica y filtra tus rutinas y ejercicios como prefieras.</p>
     </div>
     <div class="card">
-      <h3>Sin conexión y en la nube</h3>
-      <p>Funciona 100% offline. Con cuenta y red, tus datos también se guardan en la nube y se sincronizan entre hasta 2 dispositivos.</p>
+      <h3>Tus datos, en la nube</h3>
+      <p>Con tu cuenta, tus rutinas y tu progreso se guardan en la nube y se sincronizan entre hasta 2 dispositivos. Actio necesita conexión a internet para funcionar.</p>
     </div>
+    <div class="card">
+      <h3>Pruébala sin registrarte</h3>
+      <p>El modo invitado te da 7 días de prueba sin registro previo y sin método de pago: tus datos se guardan solo en tu dispositivo, y si después creas una cuenta, los conservas.</p>
+    </div>
+  </div>
+
+  <div class="notice">
+    <h3>Aviso importante</h3>
+    <p>Actio no es una aplicación médica ni sanitaria: es una herramienta para ayudarte a organizar tus entrenamientos. No diagnostica, no trata ni sustituye el consejo de un médico, fisioterapeuta o entrenador cualificado. Úsala siempre con criterio y conocimientos, y con la ayuda de un profesional si lo necesitas. No la utilices para un fin distinto del que está diseñada (consulta los <a href="terminos.html">términos y condiciones</a>).</p>
   </div>
 
   <div class="cta">
     <h2>Prueba Actio gratis durante 7 días</h2>
+    <p style="color:var(--text-secondary); margin-bottom:8px;">No necesitas registrarte ni añadir ningún método de pago para probarla.</p>
+    <p style="color:var(--text-secondary); margin-bottom:8px;">Después, desde 1,50 €/mes (precio sin impuestos)*.</p>
     <p style="color:var(--text-secondary); margin-bottom:24px;">Disponible en español, galego, català, euskara, English, Deutsch, Français, Italiano y Português.</p>
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.actioapp.actio" target="_blank" rel="noopener">Descargar en Google Play</a>
+    <span class="btn btn-disabled" aria-disabled="true">Próximamente en Google Play</span>
+    <p style="color:var(--text-secondary); font-size:0.8rem; margin-top:16px; margin-bottom:0;">*Precio orientativo. El importe final, con impuestos y moneda de tu país ya incluidos, se muestra en Google Play antes de suscribirte.</p>
   </div>
 </main>
 
 <footer>
   <span>© <span id="year"></span> Actio — DAX-Apps</span>
   <div class="links">
+    <a href="index.html">Inicio</a>
+    <a href="faq.html">FAQ</a>
     <a href="privacidad.html">Privacidad</a>
     <a href="terminos.html">Términos</a>
     <a href="contacto.html">Contacto</a>
   </div>
+  <nav class="langs" aria-label="Idioma"><span aria-current="true">Español</span><a href="gl/index.html" hreflang="gl" lang="gl">Galego</a><a href="ca/index.html" hreflang="ca" lang="ca">Català</a><a href="eu/index.html" hreflang="eu" lang="eu">Euskara</a><a href="en/index.html" hreflang="en" lang="en">English</a><a href="de/index.html" hreflang="de" lang="de">Deutsch</a><a href="fr/index.html" hreflang="fr" lang="fr">Français</a><a href="it/index.html" hreflang="it" lang="it">Italiano</a><a href="pt/index.html" hreflang="pt" lang="pt">Português</a></nav>
 </footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  menuToggle.classList.toggle('open', isOpen);
+  menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+document.getElementById('langSelect').addEventListener('change', (e) => { window.location.href = e.target.value; });
+</script>
 </body>
 </html>

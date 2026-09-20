@@ -1,17 +1,24 @@
 # Actio — Sitio web
 
-Sitio web público de [Actio](https://play.google.com/store/apps/details?id=com.actioapp.actio), la app de organización de rutinas de entrenamiento: página de inicio, política de privacidad, términos y condiciones, y contacto.
+Sitio web público de **Actio**, la app para organizar rutinas de entrenamiento, planificarlas en un calendario y seguir tu progreso.
 
-Publicado vía [GitHub Pages](https://pages.github.com/) directamente desde este repositorio.
+🌐 <https://dax-apps.github.io/Actio/>
 
-## Estructura
+Publicado con [GitHub Pages](https://pages.github.com/) directamente desde este repositorio. Actio estará disponible próximamente en Google Play.
+
+## Idiomas
+
+La web está disponible en español (raíz del sitio), galego, català, euskara, English, Deutsch, Français, Italiano y Português, cada uno en su carpeta (`/gl/`, `/ca/`, `/eu/`, `/en/`, `/de/`, `/fr/`, `/it/`, `/pt/`).
+
+## Contenido
+
+Cada idioma incluye las mismas páginas:
 
 - `index.html` — página de inicio.
+- `faq.html` — preguntas frecuentes.
 - `privacidad.html` — política de privacidad.
 - `terminos.html` — términos y condiciones.
-- `contacto.html` — contacto/soporte.
-- `styles.css` — estilos compartidos por las cuatro páginas.
-- `favicon-32.png`, `apple-touch-icon.png` — icono de la app para la pestaña del navegador e iOS.
+- `contacto.html` — contacto y soporte.
 
 ## Contacto
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Actio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="legal">
+
+<nav class="top">
+  <a href="index.html" class="wordmark" style="text-decoration:none;">Actio</a>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacidad.html">Privacy</a>
+    <a href="terminos.html">Terms</a>
+    <select class="lang-select" id="langSelect" aria-label="Language"><option value="../contacto.html">Español</option><option value="../gl/contacto.html">Galego</option><option value="../ca/contacto.html">Català</option><option value="../eu/contacto.html">Euskara</option><option value="../en/contacto.html" selected>English</option><option value="../de/contacto.html">Deutsch</option><option value="../fr/contacto.html">Français</option><option value="../it/contacto.html">Italiano</option><option value="../pt/contacto.html">Português</option></select>
+  </div>
+</nav>
+
+<main>
+<h1>Contact</h1>
+<p>Do you have a question, a technical problem, or something you would like to suggest for Actio? Write to us directly:</p>
+
+<div class="card" style="margin: 32px 0; text-align:center;">
+  <h3 style="margin-bottom:16px;">Support email</h3>
+  <a class="btn" href="mailto:dax.apps.mobile@gmail.com">dax.apps.mobile@gmail.com</a>
+</div>
+
+<h2>Before writing, if it is a technical problem</h2>
+<p>It helps a lot if you include:</p>
+<ul>
+  <li>Your device model and Android version.</li>
+  <li>What you were doing when the problem happened.</li>
+  <li>A screenshot, if possible.</li>
+</ul>
+
+<p>For questions about what data we store or how to delete your account, see the <a href="privacidad.html">privacy policy</a>.</p>
+</main>
+
+<footer>
+  <span>© <span id="year"></span> Actio — DAX-Apps</span>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacidad.html">Privacy</a>
+    <a href="terminos.html">Terms</a>
+    <a href="contacto.html">Contact</a>
+  </div>
+  <nav class="langs" aria-label="Language"><a href="../contacto.html" hreflang="es" lang="es">Español</a><a href="../gl/contacto.html" hreflang="gl" lang="gl">Galego</a><a href="../ca/contacto.html" hreflang="ca" lang="ca">Català</a><a href="../eu/contacto.html" hreflang="eu" lang="eu">Euskara</a><span aria-current="true">English</span><a href="../de/contacto.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/contacto.html" hreflang="fr" lang="fr">Français</a><a href="../it/contacto.html" hreflang="it" lang="it">Italiano</a><a href="../pt/contacto.html" hreflang="pt" lang="pt">Português</a></nav>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('langSelect').addEventListener('change', (e) => { window.location.href = e.target.value; });</script>
+</body>
+</html>

@@ -81,6 +81,14 @@ a:hover { text-decoration: none; }
 
 .btn:hover { opacity: 0.88; }
 
+/* Botón inactivo ("Próximamente en Google Play", ver APP_PUBLISHED en
+   website/tools/build.mjs): mismo aspecto que .btn pero sin acción. */
+.btn-disabled,
+.btn-disabled:hover {
+  opacity: 0.75;
+  cursor: default;
+}
+
 .btn-outline {
   background: transparent;
   border: 2px solid #fff;
@@ -88,6 +96,7 @@ a:hover { text-decoration: none; }
 }
 
 nav.top {
+  position: relative;
   max-width: var(--content-max);
   margin: 0 auto;
   padding: 20px 20px 0;
@@ -100,6 +109,18 @@ nav.top {
 
 nav.top .wordmark { font-size: 1.6rem; color: var(--text-primary); }
 .hero nav.top .wordmark { color: #fff; }
+
+/* Icono cuadrado de la marca (solo en Inicio, sustituye al wordmark
+   de texto en la cabecera) -- cuadrado con esquinas redondeadas, no
+   circular. srcset en el HTML sirve 1x/2x/3x para pantallas de alta
+   densidad sin pedir siempre el tamaño más grande. */
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+}
 
 nav.top div {
   display: flex;
@@ -114,6 +135,60 @@ nav.top a {
   opacity: 0.85;
 }
 nav.top a:hover { opacity: 1; }
+
+/* Menú de hamburguesa (solo Inicio): oculto en escritorio, donde los
+   3 enlaces siguen en línea junto al icono como hasta ahora. */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Móvil y tablet (por debajo del breakpoint "expanded" de la app,
+   AppBreakpoints.expanded = 840 en app_theme.dart): los enlaces pasan
+   a un desplegable bajo el icono y el botón de hamburguesa, en vez de
+   ir en línea. */
+@media (max-width: 839px) {
+  .menu-toggle { display: flex; }
+
+  #navLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    right: 20px;
+    flex-direction: column;
+    background: #14285f;
+    border-radius: var(--radius-card);
+    padding: var(--space-md) var(--space-lg);
+    margin-top: var(--space-sm);
+    z-index: 10;
+  }
+
+  #navLinks.open { display: flex; }
+
+  #navLinks a { font-size: 1.05rem; opacity: 1; }
+}
 
 main {
   max-width: var(--content-max);
@@ -139,12 +214,31 @@ h2 { font-size: 1.3rem; margin-top: 40px; }
   gap: var(--space-md);
 }
 
+/* "Elevación, sin cristal": la misma sombra que las tarjetas de la app
+   (BoxShadow textPrimary al 10%, desenfoque 12, desplazamiento 0/4),
+   en vez de un borde plano. */
+:root { --card-shadow: 0 4px 12px rgba(26, 29, 41, 0.10); }
+
 .card {
   background: var(--surface);
-  border: 1px solid var(--divider);
   border-radius: var(--radius-card);
+  box-shadow: var(--card-shadow);
   padding: var(--space-lg);
 }
+
+/* Aviso de uso (Actio no es una app médica...): tarjeta blanca con la
+   misma sombra, para que se distinga del texto y de las tarjetas azul
+   hielo sin competir con ellas. */
+.notice {
+  background: #fff;
+  border-radius: var(--radius-card);
+  box-shadow: var(--card-shadow);
+  padding: var(--space-lg);
+  margin: var(--space-xl) 0;
+}
+.notice h2, .notice h3 { margin-top: 0; }
+.notice p { margin: 0; color: var(--text-secondary); font-size: 0.95rem; }
+.notice p + p { margin-top: var(--space-sm); }
 
 .card h3 {
   margin: 0 0 8px;
@@ -163,6 +257,7 @@ h2 { font-size: 1.3rem; margin-top: 40px; }
   padding: 48px 20px;
   background: var(--surface);
   border-radius: var(--radius-sheet);
+  box-shadow: var(--card-shadow);
 }
 
 .cta h2 { margin-top: 0; }
@@ -186,6 +281,33 @@ footer .links a {
   text-decoration: none;
 }
 footer .links a:hover { color: var(--text-primary); }
+
+/* Selector de idioma (cabecera, con JS) y enlaces de idioma (pie, sin JS).
+   Las páginas de cada idioma las genera website/tools/build.mjs. */
+.lang-select {
+  font: inherit;
+  font-size: 0.9rem;
+  color: #1a1d29;
+  background: #fff;
+  border: 1px solid var(--divider);
+  border-radius: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+footer .langs {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-md);
+  font-size: 0.85rem;
+}
+footer .langs a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+footer .langs a:hover { color: var(--text-primary); }
+footer .langs [aria-current] { color: var(--text-primary); font-weight: 600; }
 
 ul { padding-left: 20px; }
 li { margin-bottom: 6px; }
