@@ -12,13 +12,14 @@ La web está disponible en español (raíz del sitio), galego, català, euskara,
 
 ## Contenido
 
-Cada idioma incluye las mismas páginas:
+Cada idioma incluye las mismas 6 páginas:
 
 - `index.html` — página de inicio.
 - `faq.html` — preguntas frecuentes.
 - `privacidad.html` — política de privacidad.
 - `terminos.html` — términos y condiciones.
 - `contacto.html` — contacto y soporte.
+- `eliminar-cuenta.html` — cómo eliminar la cuenta y los datos.
 
 ## Derechos de autor
 

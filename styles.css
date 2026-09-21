@@ -199,7 +199,31 @@ main {
 .legal main { padding-top: 40px; }
 
 h1 { font-size: 1.8rem; margin: 0 0 8px; }
-h2 { font-size: 1.3rem; margin-top: 40px; }
+h2 { font-size: 1.3rem; margin-top: 40px; scroll-margin-top: 16px; }
+
+/* Índice de las páginas largas (FAQ, Términos, Privacidad, Eliminar
+   cuenta): tarjeta con la misma sombra que el resto, enlaces a los <h2>. */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+.toc {
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--card-shadow);
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-lg) 0 var(--space-xl);
+}
+.toc-title {
+  margin: 0 0 var(--space-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.toc ul { margin: 0; padding-left: 0; list-style: none; }
+.toc-bullets ul { padding-left: 20px; list-style: disc; }
+.toc li { margin-bottom: 4px; }
+.toc a { color: var(--primary); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
 .updated { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 32px; }
 
 .section-title {
